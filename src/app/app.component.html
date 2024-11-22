@@ -1,1 +1,19 @@
-<app-anime-list></app-anime-list>
+<div class="banner">
+    <img src="./../assets/animeLogo.png">
+</div>
+
+<div class="container-fluid" id="principal">
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+</div>
+<footer class="page-footer">
+    <div class="footer-copyright text-center py-2">
+      ParcialPractico2 -
+      <a routerLink="/animes/list" id="colorFooterText2"> Samuel Rodríguez Torres</a>
+    </div>
+</footer>

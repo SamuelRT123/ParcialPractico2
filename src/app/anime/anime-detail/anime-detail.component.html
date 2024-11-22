@@ -1,20 +1,20 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col">
+    <div class="card">
       <dl>
-        <p class="h3">{{ animeDetail.name }}</p>
+        <p class="h3">{{ anime.name }}</p>
         <dt class="bold">Description</dt>
-        <dd>{{ animeDetail.description }}</dd>
+        <dd>{{ anime.description }}</dd>
         <hr />
         <dt>Rating ⭐</dt>
-        <dd>{{ animeDetail.Rating }}</dd>
+        <dd>{{ anime.Rating }}</dd>
         <hr />
         <dt>Studio</dt>
-        <dd>{{ animeDetail.studio }}</dd>
+        <dd>{{ anime.studio }}</dd>
         <hr />
         <dt class="bold">Number of episodes</dt>
-        <dd class="caption">{{ animeDetail.episode }}</dd>
+        <dd class="caption">{{ anime.episode }}</dd>
         <hr />
 
       </dl>
@@ -23,10 +23,26 @@
       <div class="thumb">
         <img
           class="img-fluid"
-          src="{{ animeDetail.img }}"
-          alt="{{ animeDetail.name }}"
+          src="{{ anime.img }}"
         />
       </div>
     </div>
+
+    
+    <div class="FlexBox">
+
+      <div class="1" *ngFor="let seas of anime.SeasonName">
+        <p> {{seas}}  </p>
+      </div>
+
+    
+      <div class="2" *ngFor="let cap of anime.SeasonChapters">
+        <p> {{cap}}  </p>
+      </div>
+
+    </div>
+
+    <a routerLink="/animes/list" class="btn btn-primary"> Regresar</a>
+
   </div>
  </div>

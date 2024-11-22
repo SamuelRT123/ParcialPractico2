@@ -20,6 +20,12 @@ export class AnimeService {
   getAnime(id: string): Observable<Anime> {
     return this.http.get<Anime[]>(this.apiUrl).pipe(
       map((animes: Anime[]) => {
+        for (let a of animes){ 
+          if (a.id === parseInt(id)){
+            return a;
+          }
+        }
+        
         //Complete con el código necesario para recorrer los animes y retornar el anime con el id buscado
         throw new Error(`Anime con ID ${id} no encontrado`);
       })
