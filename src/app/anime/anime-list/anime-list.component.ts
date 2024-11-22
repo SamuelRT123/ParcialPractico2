@@ -14,6 +14,8 @@ export class AnimeListComponent implements OnInit {
   animes: Array<Anime> = [];
   totalEpisodios: number=0;
   ratingPromedio:number=0;
+  temporadas: Array<string> =[];
+  capitulos:Array<string> =[];
 
   constructor(private animeService: AnimeService) { }
 
